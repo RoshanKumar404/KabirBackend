@@ -2,10 +2,14 @@
   "name": "kabirbackend",
   "version": "1.0.0",
   "description": "its a backend for my business that will be online after  its launch",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
   "author": "Roshan",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
 }
