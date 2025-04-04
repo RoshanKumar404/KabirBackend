@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "its a backend for my business that will be online after  its launch",
   "type": "module",
-  "main": "index.js",
+  "main": "indexServer.js",
   "scripts": {
-    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+    "dev": "nodemon indexServer.js"
   },
   "author": "Roshan",
   "license": "ISC",
@@ -22,6 +22,7 @@
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.12.0",
-    "mongoose": "^8.9.2"
+    "mongoose": "^8.9.2",
+    "morgan": "^1.10.0"
   }
 }
