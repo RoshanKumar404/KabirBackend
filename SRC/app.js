@@ -2,7 +2,7 @@ import express from  "express";
 import cors from "cors";
 import dotenv from "dotenv"
 import morgan from "morgan";
-import TestRoute from '../SRC/Routes/TestROutes.js'
+
 // dot env config will be on top
 dotenv.config()
 const PORT=process.env.PORT;
@@ -11,7 +11,10 @@ app.use(morgan("common"));
 app.use(express.json())
 app.use(cors());
 //routes
+import TestRoute from '../SRC/Routes/TestROutes.js'
+import userRoute from "./Routes/user.Route.js"
 app.use("/api/v1",TestRoute)
+app.use("/api/v1/user",userRoute)
 // app.get("/",(req,res)=>{
 //     return  res.status(200).send("jai sri ramm")
 // })
