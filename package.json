@@ -5,7 +5,7 @@
   "type": "module",
   "main": "indexServer.js",
   "scripts": {
-    "dev": "nodemon indexServer.js"
+    "dev": "nodemon -r dotenv/config SRC/indexServer.js"
   },
   "author": "Roshan",
   "license": "ISC",
