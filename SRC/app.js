@@ -15,8 +15,10 @@ import TestRoute from '../SRC/Routes/TestROutes.js'
 import userRoute from "./Routes/user.Route.js"
 import loginRoute from "./Routes/user.login.Route.js"
 app.use("/api/v1",TestRoute)
+//register
 app.use("/api/v1/user",userRoute)
-app.use("api/v1/user", loginRoute)
+//login
+app.use("/api/v1/user", loginRoute)
 // app.get("/",(req,res)=>{
 //     return  res.status(200).send("jai sri ramm")
 // })
