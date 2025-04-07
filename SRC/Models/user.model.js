@@ -53,6 +53,10 @@ userSchema.pre("save", async function (next) {
     next();
 })
 // generTION OF THE ACCESS TOKEN
+const options={
+    httpOnly:true,
+    secure:true
+}
 userSchema.methods.genrarateAccessToken= function(){
    return jwt.sign({
     _id:this._id,
@@ -63,7 +67,7 @@ userSchema.methods.genrarateAccessToken= function(){
     process.env.ACCESS_TOKEN_SECRET,
     {
         expiresIn:process.env.ACCESS_TOKEN_expires,
-    },
+    },options
 
 )
 }
@@ -76,6 +80,7 @@ process.env.REFRESH_TOKEN_SECRET,
 {
     expiresIn:process.env.REFRESH_TOKEN_EXPIRY
 },
+options
 )
 }
 // userSchema.methods.isPasswordCorrect = async function (password) {

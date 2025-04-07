@@ -1,6 +1,7 @@
 import express from  "express";
 import cors from "cors";
-import dotenv from "dotenv"
+import dotenv from "dotenv";
+import  cookieParser from "cookie-parser"
 import morgan from "morgan";
 
 // dot env config will be on top
@@ -10,6 +11,7 @@ const app=express();
 app.use(morgan("common"));
 app.use(express.json())
 app.use(cors());
+app.use(cookieParser());
 //routes
 import TestRoute from '../SRC/Routes/TestROutes.js'
 import userRoute from "./Routes/user.Route.js"
