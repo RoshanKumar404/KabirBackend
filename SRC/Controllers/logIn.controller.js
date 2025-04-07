@@ -40,9 +40,15 @@ export const Login=async(req,res)=>{
                 message:"Credentials did not matched."
             })
         }
+    const AccessToken= user.genrarateAccessToken()
+    const refreshToken=user.genrarateRefreshToken()
         res.status(200).send({
             status:true,
-            message:"log in successfully"
+            message:"log in successfully",
+             AccessToken,
+             refreshToken,
+            user,
+           
         })
     } catch (error) {
         console.log("error in logiing in login controller :" ,error);
